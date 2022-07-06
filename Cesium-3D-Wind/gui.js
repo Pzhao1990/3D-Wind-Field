@@ -1,5 +1,6 @@
-var demo = Cesium.defaultValue(demo, false);
+var demo = Cesium.defaultValue(demo, false)
 
+//prettier-ignore
 const fileOptions = {
     dataDirectory: demo ? 'https://raw.githubusercontent.com/RaymanNg/3D-Wind-Field/master/data/' : '../data/',
     dataFile: "demo.nc",
@@ -7,15 +8,16 @@ const fileOptions = {
 }
 
 const defaultParticleSystemOptions = {
-    maxParticles: 64 * 64,
-    particleHeight: 100.0,
-    fadeOpacity: 0.996,
-    dropRate: 0.003,
-    dropRateBump: 0.01,
-    speedFactor: 1.0,
-    lineWidth: 4.0
+  maxParticles: 64 * 64,
+  particleHeight: 100.0,
+  fadeOpacity: 0.996,
+  dropRate: 0.003,
+  dropRateBump: 0.01,
+  speedFactor: 1.0,
+  lineWidth: 4.0
 }
 
+//prettier-ignore
 const globeLayers = [
     { name: "NaturalEarthII", type: "NaturalEarthII" },
     { name: "WMS:Air Pressure", type: "WMS", layer: "Pressure_surface", ColorScaleRange: '51640,103500' },
@@ -23,11 +25,13 @@ const globeLayers = [
     { name: "WorldTerrain", type: "WorldTerrain" }
 ]
 
+//prettier-ignore
 const defaultLayerOptions = {
     "globeLayer": globeLayers[0],
     "WMS_URL": "https://www.ncei.noaa.gov/thredds/wms/model-gfs-g4-anl-files-old/201809/20180916/gfsanl_4_20180916_0000_000.grb2",
 }
 
+//prettier-ignore
 class Panel {
     constructor() {
         this.maxParticles = defaultParticleSystemOptions.maxParticles;

@@ -1,3 +1,4 @@
+//prettier-ignore
 class Wind3D {
     constructor(panel, mode) {
         var options = {
@@ -9,7 +10,10 @@ class Wind3D {
             fullscreenElement: 'cesiumContainer',
             // useBrowserRecommendedResolution can be set to false to improve the render quality
             // useBrowserRecommendedResolution: false,
-            scene3DOnly: true
+            scene3DOnly: true,
+            contextOptions: {
+                requestWebgl2: false
+            }
         }
 
         if (mode.debug) {
