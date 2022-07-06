@@ -12,7 +12,7 @@ class Wind3D {
             // useBrowserRecommendedResolution: false,
             scene3DOnly: true,
             contextOptions: {
-                requestWebgl2: false
+                requestWebgl2: true
             }
         }
 

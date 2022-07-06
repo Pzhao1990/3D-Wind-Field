@@ -14,7 +14,7 @@ uniform vec2 vSpeedRange;
 uniform float pixelSize;
 uniform float speedFactor;
 
-float speedScaleFactor;
+float speedScaleFactor = speedFactor * pixelSize;
 
 varying vec2 v_textureCoordinates;
 
@@ -131,7 +131,6 @@ float calculateWindNorm(vec3 speed) {
 }
 
 void main() {
-    speedScaleFactor = speedFactor * pixelSize;
     // texture coordinate must be normalized
     vec3 lonLatLev = texture2D(currentParticlesPosition, v_textureCoordinates).rgb;
     vec3 speed = calculateSpeedByRungeKutta2(lonLatLev);
